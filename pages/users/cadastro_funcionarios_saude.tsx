@@ -1,36 +1,30 @@
-
 import { Grid, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import{cadastrarUsuario}from '../../api/api'
-export default function Cadastro() {
+import { cadastrarProfissional } from "@/api/api";
+
+export default function cadastroProfissional(){
     const [cpf, setCpf] = useState("");
     const [nome,setNome] = useState("");
     const[idade,setIdade] = useState("");
     const[dataN,setDataN]= useState("");
-    const[numeroA,setnumeroA]= useState("");
+    const[identificador,setIdentificador]=useState("");
+    const[tipoIdentificador,settipoIdentificador]=useState("");
+    const[especialidade,setEspecialidade]=useState("");
     const url='https://img.freepik.com/fotos-premium/lindo-ceu-e-ilhas-de-agua-praia-papel-de-parede-para-pc_758374-671.jpg'
-
-    
-
-  
-
-    function cadastrarUsuarioFront() {
-        console.log(cpf);
-        cadastrarUsuario({
+    function cadastrarProfissionalSaude(){
+        cadastrarProfissional({
             cpf:cpf,
             nome:nome,
             idade:idade,
             data_de_nascimento:dataN,
-            numero_de_associacao:numeroA
-
+            identificador:identificador,
+            tipo_de_identificador:tipoIdentificador,
+            especialidade:especialidade
         })
-    }
-
-    return (
+     }return(
         <div className="app" style={{display:"flex",justifyContent:"center",alignItems:'center'}}>
-    <Grid container justifyContent={"center"}>
-
-<img src={url} alt="fundo do app" width={'700px'}/>
+            <Grid container justifyContent={"center"}>
+            <img src={url} alt="fundo do app" width={'700px'}/>
 
     <Grid item xs={12} md={12} lg={12}>
         < TextField onChange={(e)=>{setCpf(e.target.value)}}  fullWidth id="standard-basic"label="cpf"></TextField>
@@ -45,12 +39,18 @@ export default function Cadastro() {
     <TextField onChange={(e)=>{setDataN(e.target.value)}} fullWidth id="standard-basic"label="data de nascimento" ></TextField>
     </Grid>
     <Grid item xs={12} md={6} lg={12}>
-    <TextField onChange={(e)=>{setnumeroA(e.target.value)}} fullWidth id="standard-basic"label="numero de associação" />
+    <TextField onChange={(e)=>{setIdentificador(e.target.value)}} fullWidth id="standard-basic"label="identificador" ></TextField>
     </Grid>
+    <Grid item xs={12} md={6} lg={12}>
+    <TextField onChange={(e)=>{settipoIdentificador(e.target.value)}} fullWidth id="standard-basic"label="tipo de identificador" ></TextField>
     </Grid>
-    <button onClick={cadastrarUsuarioFront}>cadastro</button>
-    </div>
-    )
-  }
-  
+    <Grid item xs={12} md={6} lg={12}>
+    <TextField onChange={(e)=>{setEspecialidade(e.target.value)}} fullWidth id="standard-basic"label="diga a sua especialidade" ></TextField>
+    </Grid>
 
+            </Grid>
+            <button onClick={cadastrarProfissionalSaude}>cadastrar</button>
+        </div>
+     )
+}
+ 
