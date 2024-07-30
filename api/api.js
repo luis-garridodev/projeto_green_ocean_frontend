@@ -9,4 +9,13 @@ export async function cadastrarUsuario(usuario){
 export async function cadastrarProfissional(profissional){
   api.post("/profissionais/create",profissional)
 }
+export async function cadastrarConsultas(consulta){
+  api.post("/consultas/create",consulta)
+}
+export async function cadastrarAcompanhamentos(acompanhamento){
+  api.post("/acompanhamentos/create",acompanhamento)
+}
+export async function cadastrarAgenda(agenda){
+  api.post("/agenda/create",agenda)
+}
 export default api;

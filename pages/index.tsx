@@ -23,13 +23,21 @@ export default function mainPage(){
             <Grid item xs={12} md={12} lg={12} sx={{justifyContent:'center', display: 'flex', bgcolor:'green'}}>
           
            <MUILink  href={"/users/cadastro"}  >
-            <Button  variant="contained">cadastro</Button>
+            <Button  variant="contained">cadastro paciente</Button>
             </MUILink>
             <MUILink href={"/profissionais/create"}>
             <Button  variant="contained" >cadastro profissional</Button>
             </MUILink>
             </Grid>
- 
+            <MUILink href={"/consulta/create"}>
+            <Button  variant="contained" >cadastro de consulta</Button>
+            </MUILink>
+            <MUILink href={"/acompanhamento/create"}>
+            <Button  variant="contained" >cadastro de acompanhamento</Button>
+            </MUILink>
+            <MUILink href={"/agenda/create"}>
+            <Button  variant="contained" >cadastro de agenda</Button>
+            </MUILink>
         </Grid>
         </>
         )
