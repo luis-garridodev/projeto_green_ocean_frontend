@@ -2,7 +2,7 @@ import { Grid, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { cadastrarProfissional } from "@/api/api";
 
-export default function cadastroProfissional(){
+export default function CadastroProfissional(){
     const [cpf, setCpf] = useState("");
     const [nome,setNome] = useState("");
     const[idade,setIdade] = useState("");
@@ -11,7 +11,7 @@ export default function cadastroProfissional(){
     const[tipoIdentificador,settipoIdentificador]=useState("");
     const[especialidade,setEspecialidade]=useState("");
     const url='https://img.freepik.com/fotos-premium/lindo-ceu-e-ilhas-de-agua-praia-papel-de-parede-para-pc_758374-671.jpg'
-    function cadastrarProfissionalSaude(){
+    function CadastrarProfissionalSaude(){
         cadastrarProfissional({
             cpf:cpf,
             nome:nome,
@@ -49,7 +49,7 @@ export default function cadastroProfissional(){
     </Grid>
 
             </Grid>
-            <button onClick={cadastrarProfissionalSaude}>cadastrar</button>
+            <button onClick={cadastrarProfissional}>cadastrar</button>
         </div>
      )
 }

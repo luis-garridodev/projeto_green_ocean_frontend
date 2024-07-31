@@ -2,7 +2,7 @@ import { Grid, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { cadastrarAgenda } from "@/api/api";
 
-export default function cadastrarAgendaPage(){
+export default function CadastrarAgendaPage(){
 const[acompanhamentoId,setacompanhamentoId] = useState("");
 const[medicamentoD,setmedicamentoD]= useState("");
 const[horaM,sethoraM]= useState("");

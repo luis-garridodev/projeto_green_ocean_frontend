@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { cadastrarProfissional } from "@/api/api";
 import { cadastrarConsultas } from "@/api/api";
 
-export default function cadastroConsulta(){
+export default function CadastroConsulta(){
     const [paciente, setPaciente] = useState("");
     const [profissional,setProfissional] = useState("");
     const [pacienteId, setPacienteId] = useState("");
