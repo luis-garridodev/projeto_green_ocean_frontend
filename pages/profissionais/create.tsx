@@ -13,15 +13,15 @@ export default function CadastroProfissional(){
     const url='https://img.freepik.com/fotos-premium/lindo-ceu-e-ilhas-de-agua-praia-papel-de-parede-para-pc_758374-671.jpg'
     function CadastrarProfissionalSaude(){
     console.log('CadastrarProfissionalSaude')
-        // cadastrarProfissional({
-        //     cpf:cpf,
-        //     nome:nome,
-        //     idade:idade,
-        //     data_de_nascimento:dataN,
-        //     identificador:identificador,
-        //     tipo_de_identificador:tipoIdentificador,
-        //     especialidade:especialidade
-        // })
+        cadastrarProfissional({
+            cpf:cpf,
+            nome:nome,
+            idade:idade,
+            data_de_nascimento:dataN,
+            identificador:identificador,
+            tipo_de_identificador:tipoIdentificador,
+            especialidade:especialidade
+        })
         
      }return(
         <div className="app" style={{display:"flex",justifyContent:"center",alignItems:'center'}}>
