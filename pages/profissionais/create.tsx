@@ -12,6 +12,7 @@ export default function CadastroProfissional(){
     const[especialidade,setEspecialidade]=useState("");
     const url='https://img.freepik.com/fotos-premium/lindo-ceu-e-ilhas-de-agua-praia-papel-de-parede-para-pc_758374-671.jpg'
     function CadastrarProfissionalSaude(){
+    console.log('CadastrarProfissionalSaude')
         cadastrarProfissional({
             cpf:cpf,
             nome:nome,
@@ -21,6 +22,7 @@ export default function CadastroProfissional(){
             tipo_de_identificador:tipoIdentificador,
             especialidade:especialidade
         })
+        
      }return(
         <div className="app" style={{display:"flex",justifyContent:"center",alignItems:'center'}}>
             <Grid container justifyContent={"center"}>
