@@ -49,7 +49,7 @@ export default function CadastroProfissional(){
     </Grid>
 
             </Grid>
-            <button onClick={cadastrarProfissional}>cadastrar</button>
+            <button onClick={CadastrarProfissionalSaude}>cadastrar</button>
         </div>
      )
 }
