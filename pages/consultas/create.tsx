@@ -1,4 +1,4 @@
-import { Grid, TextField, Typography } from "@mui/material";
+import { Button, Grid, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { cadastrarProfissional } from "@/api/api";
 import { cadastrarConsultas } from "@/api/api";
@@ -27,34 +27,34 @@ export default function CadastroConsulta(){
             url_consulta:urlConsulta
         })
      }return(
-        <div className="app" style={{display:"flex",justifyContent:"center",alignItems:'center'}}>
+        <Grid container justifyContent={"center"}>
             <Grid container justifyContent={"center"}>
-            <img src={url} alt="fundo do app" width={'700px'}/>
+           
 
-    <Grid item xs={12} md={12} lg={12}>
+    <Grid item xs={12} md={12} lg={12} padding={2}>
         < TextField onChange={(e)=>{setPacienteId(e.target.value)}}  fullWidth id="standard-basic"label="digite o id do paciente"></TextField>
     </Grid>
    
-    <Grid item xs={12} md={6} lg={12}>
+    <Grid item xs={12} md={6} lg={12} padding={2}>
     <TextField onChange={(e)=>{setProfissionalId(e.target.value)}} fullWidth id="standard-basic"label="digite o id do profissional encarregado" ></TextField>
     </Grid>
    
-    <Grid item xs={12} md={6} lg={12}>
+    <Grid item xs={12} md={6} lg={12} padding={2}>
     <TextField onChange={(e)=>{setDataConsulta(e.target.value)}} fullWidth id="standard-basic"label="data de consulta" ></TextField>
     </Grid>
-    <Grid item xs={12} md={6} lg={12}>
+    <Grid item xs={12} md={6} lg={12} padding={2}>
     <TextField onChange={(e)=>{setdataFim(e.target.value)}} fullWidth id="standard-basic"label="data de fim de consulta" ></TextField>
     </Grid>
-    <Grid item xs={12} md={6} lg={12}>
+    <Grid item xs={12} md={6} lg={12} padding={2}>
     <TextField onChange={(e)=>{setlocalConsulta(e.target.value)}} fullWidth id="standard-basic"label="digite o local da consulta" ></TextField>
     </Grid>
-    <Grid item xs={12} md={6} lg={12}>
+    <Grid item xs={12} md={6} lg={12} padding={2}>
     <TextField onChange={(e)=>{seturlConsulta(e.target.value)}} fullWidth id="standard-basic"label="diga o link da consulta" ></TextField>
     </Grid>
 
             </Grid>
-            <button onClick={cadastrarConsulta}>cadastrar</button>
-        </div>
+            <Grid container  justifyContent={"center"}> <Button variant="contained" onClick={cadastrarConsulta}>cadastrar</Button></Grid>
+            </Grid>
      )
 }
  

@@ -1,4 +1,4 @@
-import { Grid, TextField, Typography } from "@mui/material";
+import { Button, Grid, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { cadastrarAcompanhamentos } from "@/api/api";
 
@@ -29,36 +29,37 @@ export default function CadastrarAcompanhamentoPage(){
     }
     
     return(
-        <div className="app" style={{display:"flex",justifyContent:"center",alignItems:'center'}}>
+        
+        <Grid container justifyContent={"center"}>
             <Grid container justifyContent={"center"}>
-            <img src={url} alt="fundo do app" width={'700px'}/>
+           
 
-    <Grid item xs={12} md={12} lg={12}>
+    <Grid item xs={12} md={12} lg={12} padding={2}>
         < TextField onChange={(e)=>{setPacienteId(e.target.value)}}  fullWidth id="standard-basic"label="digite o id do paciente"></TextField>
     </Grid>
    
-    <Grid item xs={12} md={6} lg={12}>
+    <Grid item xs={12} md={6} lg={12} padding={2}>
     <TextField onChange={(e)=>{setProfissionalId(e.target.value)}} fullWidth id="standard-basic"label="digite o id do profissional encarregado" ></TextField>
     </Grid>
-    <Grid item xs={12} md={6} lg={12}>
+    <Grid item xs={12} md={6} lg={12} padding={2}>
     <TextField onChange={(e)=>{setReceitas(e.target.value)}} fullWidth id="standard-basic"label="digite a receita para o paciente" ></TextField>
     </Grid>
-    <Grid item xs={12} md={6} lg={12}>
+    <Grid item xs={12} md={6} lg={12} padding={2}>
     <TextField onChange={(e)=>{setStatus(e.target.value)}} fullWidth id="standard-basic"label="digite o status do paciente" ></TextField>
     </Grid>
-    <Grid item xs={12} md={6} lg={12}>
+    <Grid item xs={12} md={6} lg={12} padding={2}>
     <TextField onChange={(e)=>{setEstado(e.target.value)}} fullWidth id="standard-basic"label="digite o estado do paciente" ></TextField>
     </Grid>
-    <Grid item xs={12} md={6} lg={12}>
+    <Grid item xs={12} md={6} lg={12} padding={2}>
     <TextField onChange={(e)=>{setObservacoes(e.target.value)}} fullWidth id="standard-basic"label="digite a observação" ></TextField>
     </Grid>
-    <Grid item xs={12} md={6} lg={12}>
+    <Grid item xs={12} md={6} lg={12} padding={2}>
     <TextField onChange={(e)=>{setContato(e.target.value)}} fullWidth id="standard-basic"label="digite o contato" ></TextField>
     </Grid>
-    <Grid item xs={12} md={6} lg={12}>
+    <Grid item xs={12} md={6} lg={12} padding={2}>
     <TextField onChange={(e)=>{setnumeroContato(e.target.value)}} fullWidth id="standard-basic"label="digite o numero do contato" ></TextField>
     </Grid>
-    <Grid item xs={12} md={6} lg={12}>
+    <Grid item xs={12} md={6} lg={12} padding={2}>
     <TextField onChange={(e)=>{setnumeroPaciente(e.target.value)}} fullWidth id="standard-basic"label="digite o numero do paciente" ></TextField>
     </Grid>
 
@@ -66,7 +67,8 @@ export default function CadastrarAcompanhamentoPage(){
     
 
             </Grid>
-            <button onClick={cadastrarAcompanhamento}>cadastrar</button>
-        </div>
+            <Grid container  justifyContent={"center"}> <Button variant="contained" onClick={cadastrarAcompanhamento}>cadastrar</Button></Grid>
+            </Grid>
+            
     )
 }

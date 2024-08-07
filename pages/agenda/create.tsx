@@ -1,4 +1,4 @@
-import { Grid, TextField, Typography } from "@mui/material";
+import { Button, Grid, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { cadastrarAgenda } from "@/api/api";
 
@@ -20,20 +20,20 @@ function cadastrarAgendaOnClick(){
 
 
 return(
-    <div className="app" style={{display:"flex",justifyContent:"center",alignItems:'center'}}>
     <Grid container justifyContent={"center"}>
-    <img src={url} alt="fundo do app" width={'700px'}/>
+    <Grid container justifyContent={"center"}>
+   
 
-<Grid item xs={12} md={12} lg={12}>
+<Grid item xs={12} md={12} lg={12} padding={2}>
 < TextField onChange={(e)=>{setacompanhamentoId(e.target.value)}}  fullWidth id="standard-basic"label="digite o id do acompanhamento"></TextField>
 </Grid>
-<Grid item xs={12} md={12} lg={12}>
+<Grid item xs={12} md={12} lg={12} padding={2}>
 < TextField onChange={(e)=>{setmedicamentoD(e.target.value)}}  fullWidth id="standard-basic"label="digite o id do medicamento"></TextField>
 </Grid>
-<Grid item xs={12} md={12} lg={12}>
+<Grid item xs={12} md={12} lg={12} padding={2}>
 < TextField onChange={(e)=>{sethoraM(e.target.value)}}  fullWidth id="standard-basic"label="digite a hora do medicamento"></TextField>
 </Grid>
-<Grid item xs={12} md={12} lg={12}>
+<Grid item xs={12} md={12} lg={12} padding={2}>
 < TextField onChange={(e)=>{setalarme(e.target.value)}}  fullWidth id="standard-basic"label="digite a hora do alarme"></TextField>
 </Grid>
 
@@ -42,8 +42,8 @@ return(
 
 
     </Grid>
-    <button onClick={cadastrarAgendaOnClick}>cadastrar</button>
-</div>
+    <Grid container  justifyContent={"center"}> <Button variant="contained" onClick={cadastrarAgendaOnClick}>cadastrar</Button></Grid>
+    </Grid>
 
 )
 
