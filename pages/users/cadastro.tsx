@@ -29,7 +29,7 @@ export default function Cadastro() {
 
     return (
      <>  
-    <Grid container justifyContent={"center"} color={"#f5f5f5"}>
+    <Grid container justifyContent={"center"} >
 
 
     <Grid item xs={12} md={8} lg={8} padding={2} >
