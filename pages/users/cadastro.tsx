@@ -29,10 +29,10 @@ export default function Cadastro() {
 
     return (
      <>  
-    <Grid container justifyContent={"center"}>
+    <Grid container justifyContent={"center"} color={"#f5f5f5"}>
 
 
-    <Grid item xs={12} md={8} lg={8} padding={2}>
+    <Grid item xs={12} md={8} lg={8} padding={2} >
         < TextField onChange={(e)=>{setCpf(e.target.value)}}  fullWidth id="standard-basic"label="cpf"></TextField>
     </Grid>
     <Grid item xs={12} md={8} lg={8}  padding={2}>
