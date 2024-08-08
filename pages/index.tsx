@@ -10,7 +10,7 @@ export default function mainPage(){
        
 
        <Grid container justifyContent={"center"}>
-        <div className="app" style={{display:"flex",justifyContent:"center",alignItems:'center'}}>
+        <div className="app" style={{display:"flex",justifyContent:"center",alignItems:'center',color:'#f5f5f5'}}>
         <h1 style={{backgroundColor :"red",display:"inline",position:"fixed"}}>bem vindo a página inicial da green ocean</h1>
        
        
