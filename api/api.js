@@ -41,6 +41,9 @@ export async function cadastrarAcompanhamentos(acompanhamento){
 export async function cadastrarAgenda(agenda){
   api.post("/agenda/create",agenda)
 }
+export async function cadastrarData(calendario){
+  api.post("/calendario",calendario)
+}
 export async function listagens(listar){
   api.get("/listagem",listar)
 }

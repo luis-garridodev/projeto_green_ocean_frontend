@@ -50,6 +50,7 @@ export default function Cadastro() {
     </Grid>
    
     <Grid container  justifyContent={"center"}> <Button variant="contained" onClick={cadastrarUsuarioFront} >cadastro</Button></Grid>
+    
     </>
     )
   }
