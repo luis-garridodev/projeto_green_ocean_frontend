@@ -5,8 +5,8 @@ export default function userPage(){
         <div className={styles.menuContainer}>
         <div className="app" style={{display:"flex",justifyContent:"flex-end",alignItems:'center'}}>
         <h1 style={{backgroundColor :"red",display:"inline",position:"fixed"}}>create</h1>
-        <img src={url} alt="fundo do app" width={'700px'}/>
-      
+        
+    
         </div>
         </div>
         )
