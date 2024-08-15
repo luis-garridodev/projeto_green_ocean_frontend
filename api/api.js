@@ -19,12 +19,9 @@ const api=axios.create({
   export async function listarAgendas(){
     return api.get('/agenda/')
   }
-
-
-  
-  
-
-
+  export async function listarCalendarioPaciente(){
+    return api.get('/calendario/')
+  }
 export async function cadastrarUsuario(usuario){
     console.log(usuario,'UESE')
     api.post("/paciente/create",usuario)  
@@ -42,7 +39,9 @@ export async function cadastrarAgenda(agenda){
   api.post("/agenda/create",agenda)
 }
 export async function cadastrarData(calendario){
-  api.post("/calendario",calendario)
+  console.log(calendario);
+
+ return api.post("/calendario/create",calendario)
 }
 export async function listagens(listar){
   api.get("/listagem",listar)

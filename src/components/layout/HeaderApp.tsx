@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import TsunamiIcon from '@mui/icons-material/Tsunami';
 
 import Grid from '@mui/material/Grid';
 import { Link as MUILink } from '@mui/material';
@@ -42,7 +43,7 @@ function HeaderApp() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <TsunamiIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -58,7 +59,7 @@ function HeaderApp() {
               textDecoration: 'none',
             }}
           >
-         GREEN
+         GREEN OCEAN
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
